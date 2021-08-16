@@ -91,3 +91,28 @@ This step is the same as pretrim.
 ```
 sbatch posttrim.sh
 ```
+
+## Step 5: QC of Fastq Files: Contamination Screening
+
+
+FastQ Screen is an application allowing us to search a large sequence dataset against a panel of different genomes to determine from where the data originate.
+
+The program generates both text and graphical output to inform you what proportion of the library was able to map, either uniquely or to more than one location, against each of the specified reference genomes.
+
+Run script to check trimmed fastq files.
+
+```
+sbatch fastqscreen.sh
+```
+
+The output is found in output/FastqScreen_multiqc_report.html
+
+## Step 6: Align to mm10 genome using STAR
+
+### Generating star index
+
+We first need to generate star indices for efficient mapping of RNA-seq fastq data to the indexed reference genome. This may have already been done, but be sure to double check the sequencing length to optimize alignment.
+
+In desired directory, run the following script for setting up genome sequence, annotation, and star indices. The star index is optimized for 50bp sequencing data. Edit --sjdbOverhang for alternative read lengths. Ideally, this length should be equal to the ReadLength-1, where ReadLength is the length of the reads. For more information: https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf.
+
+ 
