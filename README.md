@@ -118,7 +118,7 @@ In desired directory, run the following script for setting up genome sequence, a
 
 ## Step 7: Differential Expression Analysis Using Rstudio
 
-See attached Wenderski_RNAseq_edgeR.R script for differential Expression Analysis using Rstudio.
+See attached Kim_RNAseq_SA_SE.R script for differential Expression Analysis using Rstudio.
 
 Pathways to files is likely different and would need to be updated accordingly to allow scripts to run properly.
 
