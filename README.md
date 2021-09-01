@@ -115,4 +115,10 @@ We first need to generate star indices for efficient mapping of RNA-seq fastq da
 
 In desired directory, run the following script for setting up genome sequence, annotation, and star indices. The star index is optimized for 50bp sequencing data. Edit --sjdbOverhang for alternative read lengths. Ideally, this length should be equal to the ReadLength-1, where ReadLength is the length of the reads. For more information: https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf.
 
- 
+
+## Step 7: Differential Expression Analysis Using Rstudio
+
+See attached Wenderski_RNAseq_edgeR.R script for differential Expression Analysis using Rstudio.
+
+Pathways to files is likely different and would need to be updated accordingly to allow scripts to run properly.
+
